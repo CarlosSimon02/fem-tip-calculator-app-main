@@ -1,0 +1,27 @@
+@use 'sass:math';
+
+$breakpoints: (
+    'mobile': 374px,
+    'tablet': 768px,
+    'small-desktop': 1100px,
+    'desktop': 1439px
+);
+
+@function toRem($pxValue) {
+    @return math.div($pxValue, 16px) * 1rem; 
+}
+
+@function fluid($min-size, $max-size, $min-breakpoint, $max-breakpoint, $unit: vw) {
+    $slope: math.div($max-size - $min-size, map-get($breakpoints, $max-breakpoint) - map-get($breakpoints, $min-breakpoint));
+    $slope-to-unit: $slope * 100;
+    $intercept-rem: toRem($min-size - $slope * map-get($breakpoints, $min-breakpoint));
+    $min-size-rem: toRem($min-size);
+    $max-size-rem: toRem($max-size);
+    @return clamp(#{$min-size-rem}, #{$slope-to-unit}#{$unit} + #{$intercept-rem}, #{$max-size-rem});
+}
+
+@mixin breakpoint($size) {
+    @media (min-width: (math.div(map-get($breakpoints, $size), 16px) * 1em)) {
+        @content;
+    }
+}

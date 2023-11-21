@@ -1,0 +1,11 @@
+@use 'scss-utils' as u;
+
+body {
+    background-color: var(--clr-bg-body);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: u.toRem(48.86px);
+}
