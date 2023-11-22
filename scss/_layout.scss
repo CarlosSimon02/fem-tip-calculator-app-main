@@ -18,9 +18,10 @@ main {
         margin-top: 0;
         justify-content: center;
         top: -3.7109375vh;
+        gap: u.toRem(87.86px);
     }
 
-    @media (max-height: 41.625em) {
+    @media (max-height: 45.625em) {
         top: 0;
     }
 }
