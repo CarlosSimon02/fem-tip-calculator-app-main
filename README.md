@@ -25,5 +25,5 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/CarlosSimon02/fem-tip-calculator-app-main](https://github.com/CarlosSimon02/fem-tip-calculator-app-main)
+- Live Site URL: [https://fem-tip-calculator-app-main-jv1k0u8gw-carlossimon02.vercel.app/](https://fem-tip-calculator-app-main-jv1k0u8gw-carlossimon02.vercel.app/)
