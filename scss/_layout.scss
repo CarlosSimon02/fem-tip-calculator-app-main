@@ -5,7 +5,131 @@ body {
 }
 
 main {
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
     gap: u.toRem(48.86px);
+    margin-top: u.toRem(50px);
+    align-items: center;
+
+    @include u.breakpoint(desktop) {
+        margin-top: 0;
+        justify-content: center;
+        top: -3.7109375vh;
+    }
+
+    @media (max-height: 41.625em) {
+        top: 0;
+    }
+}
+
+.calc {
+    margin-inline: auto;
+    max-width: u.toRem(520px);
+    align-self: stretch;
+    background-color: var(--clr-primary);
+    padding: u.toRem(32px);
+    border-top-left-radius: u.toRem(25px);
+    border-top-right-radius: u.toRem(25px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: u.toRem(32px);
+    box-shadow: 0 u.toRem(32px) u.toRem(43px) 0 hsla(186, 38%, 50%,20.07%);
+
+    @include u.breakpoint(desktop) {
+        max-width: u.toRem(920px);
+        border-radius: u.toRem(25px);
+        gap: u.toRem(48px);
+    }
+
+    &>* {
+        flex: 1 1 u.toRem(413px);
+    }
+
+    &__form {
+        display: grid;
+        gap: u.toRem(32px);
+        flex-basis: u.toRem(379px);
+
+        @include u.breakpoint(desktop) {
+            margin-block-start: u.toRem(13px);
+            margin-block-end: u.toRem(16px);
+            margin-inline-start: u.toRem(16px);
+        }
+        
+        & .field-label {
+            margin-bottom: u.toRem(6px);
+        }
+
+        &__tip {
+            &>.field-label {
+                margin-bottom: u.toRem(16px);
+            }
+
+            &__choices {
+                display: flex;
+                flex-wrap: wrap;
+                gap: u.toRem(16px);
+                justify-content: stretch;
+
+                @include u.breakpoint(desktop) {
+                    gap: u.toRem(14px);
+                }
+
+                &>* {
+                    height: u.toRem(48px);
+                    flex: 1 1 u.toRem(110px);
+                }
+                
+                & label {
+                    cursor: pointer;
+                    background-color: var(--clr-secondary-1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    text-align: center;
+                    color: var(--clr-primary);
+                    border-radius: u.toRem(5px);
+                }
+
+                & input[type=number] {
+                    padding-inline-start: u.toRem(10px);
+                    padding-inline-end: u.toRem(14px);
+                }
+            }
+        }
+    }
+
+    &__result {
+        background-color: var(--clr-secondary-1);
+        color: var(--clr-primary);
+        padding: u.toRem(24px);
+        border-radius: u.toRem(15px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: u.toRem(32px);
+
+        @include u.breakpoint(desktop) {
+            padding: u.toRem(40px);
+        }
+
+        &__display {
+            display: grid;
+            gap: u.toRem(20px);
+            
+            @include u.breakpoint(desktop) {
+                gap: u.toRem(25px);
+            }
+
+            & .flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
 }

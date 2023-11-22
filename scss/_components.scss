@@ -1,0 +1,78 @@
+@use 'scss-utils' as u;
+
+.iconTextField {
+    position: relative;
+}
+
+.iconTextField svg {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: u.toRem(19.26px);
+    transform: translateY(-50%);
+}
+
+input[type=radio] {
+    display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    width: 100%;
+    appearance: textfield;
+    background-color: var(--clr-inputField);
+    border: u.toRem(2px) solid var(--clr-inputField);
+    text-align: right;
+    outline: none;
+    color: var(--clr-secondary-1);
+    padding-inline: u.toRem(17px);
+    border-radius: u.toRem(5px);
+    height: u.toRem(48px);
+}
+
+input[type=number]:hover {
+    border: u.toRem(2px) solid var(--clr-accent);
+}
+
+input[type=number]:focus {
+    border: u.toRem(2px) solid var(--clr-secondary-1);
+}
+
+input[type=radio]:checked+label {
+    color: var(--clr-secondary-1);
+    background-color: var(--clr-accent);
+}
+
+.calc__form__tip__choices label,
+button {
+    transition: scale .2s;
+}
+
+button {
+    cursor: pointer;
+    height: u.toRem(48px);
+    text-transform: uppercase;
+    font-size: u.toRem(20px);
+    padding-inline: u.toRem(32px);
+    background-color: var(--clr-accent);
+    border-style: none;
+    border-radius: u.toRem(5px);
+    color: var(--clr-secondary-1);
+}
+
+.calc__form__tip__choices label:hover,
+button:hover {
+    background-color: var(--clr-comp-hover);
+    color: var(--clr-secondary-1);
+}
+
+.calc__form__tip__choices label:active,
+button:active {
+    scale: .95;
+}

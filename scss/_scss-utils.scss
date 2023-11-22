@@ -1,10 +1,8 @@
 @use 'sass:math';
 
 $breakpoints: (
-    'mobile': 374px,
-    'tablet': 768px,
-    'small-desktop': 1100px,
-    'desktop': 1439px
+    'desktop': 1000px,
+    'desktop-large': 1440px
 );
 
 @function toRem($pxValue) {

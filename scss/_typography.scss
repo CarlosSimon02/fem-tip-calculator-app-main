@@ -1,0 +1,36 @@
+@use 'scss-utils' as u;
+
+body {
+    font-family: var(--ff-main);
+    font-weight: bold;
+}
+
+.calc__form {
+    font-size: u.toRem(24px);
+}
+
+.field-label {
+    color: var(--clr-secondary-2);
+    font-size: u.toRem(16px);
+    display:table; 
+    clear: both;
+}
+
+h1 {
+    color: var(--clr-accent);
+    font-size: u.toRem(32px);
+
+    @include u.breakpoint(desktop) {
+        font-size: u.toRem(48px);
+        line-height: u.toRem(71px);
+    }
+}
+
+.label {
+    font-size: u.toRem(16px);
+}
+
+.unit {
+    color: var(--clr-secondary-3);
+    font-size: u.toRem(13px);
+}
