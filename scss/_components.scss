@@ -101,5 +101,6 @@ button:active {
 
 button:disabled {
     background-color: var(--clr-disabled);
+    color: var(--clr-text-disabled);
     scale: 1;
 }
