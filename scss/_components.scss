@@ -1,5 +1,11 @@
 @use 'scss-utils' as u;
 
+fieldset {
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
 .iconTextField {
     position: relative;
 }
@@ -42,6 +48,21 @@ input[type=number]:hover {
 
 input[type=number]:focus {
     border: u.toRem(2px) solid var(--clr-secondary-1);
+}
+
+input[type=number]:invalid {
+    border-color: var(--clr-error);
+}
+
+fieldset:invalid .error-msg {
+    display: block;
+
+    @include u.breakpoint(desktop) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0;
+    }
 }
 
 input[type=radio]:checked+label {

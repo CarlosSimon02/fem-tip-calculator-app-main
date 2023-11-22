@@ -34,3 +34,11 @@ h1 {
     color: var(--clr-secondary-3);
     font-size: u.toRem(13px);
 }
+
+.error-msg {
+    font-size: u.toRem(16px);
+    color: var(--clr-error);    
+    text-align: right;
+    margin-top: u.toRem(6px);
+    display: none;
+}
