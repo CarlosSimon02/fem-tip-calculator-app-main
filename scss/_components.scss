@@ -46,11 +46,12 @@ input[type=number]:hover {
     border: u.toRem(2px) solid var(--clr-accent);
 }
 
+input[type=radio]:checked+input[type=number],
 input[type=number]:focus {
-    border: u.toRem(2px) solid var(--clr-secondary-1);
+    border: u.toRem(2px) solid var(--clr-comp-hover);
 }
 
-input[type=number]:invalid {
+#persons:invalid {
     border-color: var(--clr-error);
 }
 
