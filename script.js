@@ -10,7 +10,17 @@ let tipAmount = document.getElementById("tip-amount");
 let total = document.getElementById("total");
 let reset = document.getElementById("reset");
 
+function setResetEnabled() {
+    if(bill.value === "" && currentTip === null && persons.value === "") {
+        reset.disabled = true;
+        return;
+    }
+
+    reset.disabled = false;
+}
+
 function calculateTipAndTotal() {
+    setResetEnabled();
     if(bill.value !== "" &&
        (currentTip !== null && currentTip.value !== "") &&
        (persons.value !== "" && parseInt(persons.value) > 0)) {

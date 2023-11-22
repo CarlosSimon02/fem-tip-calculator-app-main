@@ -58,6 +58,7 @@ main {
             margin-block-start: u.toRem(13px);
             margin-block-end: u.toRem(16px);
             margin-inline-start: u.toRem(16px);
+            gap: u.toRem(40px);
         }
         
         & .field-label {
